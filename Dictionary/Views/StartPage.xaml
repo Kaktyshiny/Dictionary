@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Dictionary.StartPage">
+	<ContentPage.ToolbarItems>
+	    <ToolbarItem x:Name="first" Name="MenuItem1" Order="Primary" Priority="0" />
+		<ToolbarItem Name="MenuItem1" Order="Primary" Text="⇔" Priority="0" Activated="ChangeLanguage" />
+	    <ToolbarItem x:Name="second" Name="MenuItem2" Order="Primary" Priority="1" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout x:Name="Stacktoeditor" HorizontalOptions="Center" Padding="5,10">
+			<Editor  x:Name="Textarea" BackgroundColor="White" TextColor="Black" Text="{Binding TranslateText}" WidthRequest="1000" HeightRequest="150"/>
+			<Button Text="Перевести" WidthRequest="1000"/>
+			<Label x:Name="YandexText" TextColor="Black" FontSize="20" Text="Реализовано с помощью сервиса «Яндекс.Словарь" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
